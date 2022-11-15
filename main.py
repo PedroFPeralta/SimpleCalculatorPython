@@ -7,7 +7,10 @@ def calculator():
     if "!sqr" in operation:
         print("Calcular raiz quadrada")
         raiz = input("Valor: ")
-        print(math.sqrt(int(raiz)))
+        try:
+            print(math.sqrt(int(raiz)))
+        except:
+            print("Erro de Sintaxe! Verifique o que escreveu!")
     elif "^" in operation:
         print("Erro de Sintaxe: Subsitua o caracter '^' por '**'")
 
